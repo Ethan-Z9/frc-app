@@ -20,7 +20,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  
+
+  assets:
+    - assets/FRCLogo2.png
+    
 flutter_launcher_icons:
   android: true
   ios: true

@@ -1,65 +1,95 @@
+// lib/widgets/user_menu/user_menu.dart
 import 'package:flutter/material.dart';
 
-class UserMenu extends StatelessWidget {
+class UserMenu extends StatefulWidget {
   final bool isDarkMode;
-  final VoidCallback toggleDarkMode;
-  final bool isLoggedIn;
+  final VoidCallback onToggleTheme;
   final VoidCallback onLogin;
   final VoidCallback onSignOut;
+  final bool isLoggedIn;
 
   const UserMenu({
     super.key,
     required this.isDarkMode,
-    required this.toggleDarkMode,
-    required this.isLoggedIn,
+    required this.onToggleTheme,
     required this.onLogin,
     required this.onSignOut,
+    required this.isLoggedIn,
   });
 
   @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final textColor = isDark ? Colors.white : Colors.black;
+  State<UserMenu> createState() => _UserMenuState();
+}
 
-    return PopupMenuButton<int>(
-      icon: const Icon(Icons.person),
-      offset: const Offset(0, kToolbarHeight),
-      itemBuilder: (context) => [
-        PopupMenuItem<int>(
+class _UserMenuState extends State<UserMenu> {
+  final GlobalKey _menuKey = GlobalKey();
+
+  void _showCustomMenu() async {
+    final RenderBox button = _menuKey.currentContext!.findRenderObject() as RenderBox;
+    final Offset position = button.localToGlobal(Offset.zero);
+
+    await showMenu<void>(
+      context: context,
+      position: RelativeRect.fromLTRB(
+        position.dx,
+        position.dy + button.size.height,
+        position.dx + button.size.width,
+        position.dy,
+      ),
+      items: <PopupMenuEntry>[
+        PopupMenuItem(
           enabled: false,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Dark Mode',
-                style: TextStyle(color: textColor),
-              ),
-              Switch(
-                value: isDarkMode,
-                onChanged: (val) {
-                  Navigator.pop(context); // Close the menu
-                  toggleDarkMode();
-                },
-              ),
-            ],
+          child: StatefulBuilder(
+            builder: (context, setState) {
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Icon(Icons.light_mode),
+                  Switch(
+                    value: widget.isDarkMode,
+                    onChanged: (value) {
+                      widget.onToggleTheme();
+                      setState(() {});
+                    },
+                  ),
+                  const Icon(Icons.dark_mode),
+                ],
+              );
+            },
           ),
         ),
         const PopupMenuDivider(),
-        PopupMenuItem<int>(
-          value: isLoggedIn ? 1 : 2,
-          child: Text(
-            isLoggedIn ? 'Sign Out' : 'Login',
-            style: TextStyle(color: textColor),
-          ),
-        ),
+        widget.isLoggedIn
+            ? PopupMenuItem(
+                onTap: widget.onSignOut,
+                child: const Row(
+                  children: [
+                    Icon(Icons.logout),
+                    SizedBox(width: 8),
+                    Text('Sign Out'),
+                  ],
+                ),
+              )
+            : PopupMenuItem(
+                onTap: widget.onLogin,
+                child: const Row(
+                  children: [
+                    Icon(Icons.login),
+                    SizedBox(width: 8),
+                    Text('Login'),
+                  ],
+                ),
+              ),
       ],
-      onSelected: (value) {
-        if (value == 1) {
-          onSignOut();
-        } else if (value == 2) {
-          onLogin();
-        }
-      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      key: _menuKey,
+      icon: const Icon(Icons.person),
+      onPressed: _showCustomMenu,
     );
   }
 }
