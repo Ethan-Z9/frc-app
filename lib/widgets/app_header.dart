@@ -26,6 +26,8 @@ class AppHeader extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
+            Color(0xff6699CC), Color(0xff6699CC),
+            /*
             Color(0xffe20c10), // Red
             Color(0xffea3c3f),
             Color(0xfff26c6e),
@@ -40,6 +42,7 @@ class AppHeader extends StatelessWidget {
             Color(0xff4395d6),
             Color(0xff247bc5),
             Color(0xff005fa8), // Blue
+            */
             ],
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
@@ -55,7 +58,7 @@ class AppHeader extends StatelessWidget {
             ),
           ),
           const Text(
-            '639 Code Red Robotics',
+            '[Placeholder]',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           Padding(
