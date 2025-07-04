@@ -7,7 +7,7 @@ class SystemClock extends StatefulWidget {
 
   @override
   State<SystemClock> createState() => _SystemClockState();
-}WeakMap
+}
 
 class _SystemClockState extends State<SystemClock> {
   late String _hourMinute;
