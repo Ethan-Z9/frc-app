@@ -8,6 +8,7 @@ class AppHeader extends StatelessWidget {
   final VoidCallback onLogin;
   final VoidCallback onSignOut;
   final bool isLoggedIn;
+  final String title; // NEW
 
   const AppHeader({
     super.key,
@@ -16,6 +17,7 @@ class AppHeader extends StatelessWidget {
     required this.onLogin,
     required this.onSignOut,
     required this.isLoggedIn,
+    required this.title, // NEW
   });
 
   @override
@@ -26,24 +28,9 @@ class AppHeader extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: <Color>[
-            Color(0xff6699CC), Color(0xff6699CC),
-            /*
-            Color(0xffe20c10), // Red
-            Color(0xffea3c3f),
-            Color(0xfff26c6e),
-            Color(0xfff99c9c),
-            Color(0xffffcaca),
-            Color(0xffffe4e4),
-            Color(0xffffffff),// White
-            Color(0xffffffff),// White
-            Color(0xffd0e4f4),
-            Color(0xffa1caea),
-            Color(0xff72afe0),
-            Color(0xff4395d6),
-            Color(0xff247bc5),
-            Color(0xff005fa8), // Blue
-            */
-            ],
+            Color(0xff6699CC),
+            Color(0xff6699CC),
+          ],
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
         ),
@@ -57,9 +44,9 @@ class AppHeader extends StatelessWidget {
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),
           ),
-          const Text(
-            '[Placeholder]',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 12),

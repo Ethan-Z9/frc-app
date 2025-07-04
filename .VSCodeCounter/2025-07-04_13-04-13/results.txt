@@ -1,0 +1,45 @@
+Date : 2025-07-04 13:04:13
+Directory : c:\Users\eqz03\frc-app\lib
+Total : 15 files,  519 codes, 25 comments, 70 blanks, all 614 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         15 |        519 |         25 |         70 |        614 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                        | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                           |         15 |        519 |         25 |         70 |        614 |
+| . (Files)                                                   |          2 |         41 |          3 |          9 |         53 |
+| home                                                        |          1 |        112 |          4 |         10 |        126 |
+| pages                                                       |          8 |         88 |          0 |         24 |        112 |
+| widgets                                                     |          4 |        278 |         18 |         27 |        323 |
+| widgets (Files)                                             |          3 |        191 |         17 |         19 |        227 |
+| widgets\user_menu                                           |          1 |         87 |          1 |          8 |         96 |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                    | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\eqz03\frc-app\lib\app.dart                         | Dart     |         36 |          3 |          8 |         47 |
+| c:\Users\eqz03\frc-app\lib\home\home_page.dart              | Dart     |        112 |          4 |         10 |        126 |
+| c:\Users\eqz03\frc-app\lib\main.dart                        | Dart     |          5 |          0 |          1 |          6 |
+| c:\Users\eqz03\frc-app\lib\pages\analyze_page.dart          | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\compare_page.dart          | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\dashboard_page.dart        | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\export_page.dart           | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\import_page.dart           | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\match_scout_page.dart      | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\pit_scout_page.dart        | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\pages\settings_page.dart         | Dart     |         11 |          0 |          3 |         14 |
+| c:\Users\eqz03\frc-app\lib\widgets\app_drawer.dart          | Dart     |         57 |          0 |          5 |         62 |
+| c:\Users\eqz03\frc-app\lib\widgets\app_header.dart          | Dart     |         58 |         17 |          4 |         79 |
+| c:\Users\eqz03\frc-app\lib\widgets\system_clock.dart        | Dart     |         76 |          0 |         10 |         86 |
+| c:\Users\eqz03\frc-app\lib\widgets\user_menu\user_menu.dart | Dart     |         87 |          1 |          8 |         96 |
+| Total                                                       |          |        519 |         25 |         70 |        614 |
++-------------------------------------------------------------+----------+------------+------------+------------+------------+
