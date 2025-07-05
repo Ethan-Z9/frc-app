@@ -1,5 +1,5 @@
 name: frc_app
-description: "A new Flutter project."
+description: "A FRC Scouting App made with Flutter."
 publish_to: 'none' 
 
 version: 1.0.0+1
@@ -22,7 +22,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  assets:
+  assets: # Imports assets
     - assets/FRCLogo2.png
     
 flutter_launcher_icons:

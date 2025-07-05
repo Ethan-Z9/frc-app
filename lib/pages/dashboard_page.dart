@@ -25,7 +25,7 @@ class DashboardPage extends StatelessWidget {
                   child: const Center(
                     child: RotatedBox(
                       quarterTurns: -1,
-                      child: Text('Sponsor Logo?'),
+                      child: Text('[Placeholder]'),
                     ),
                   ),
                 ),
@@ -36,13 +36,13 @@ class DashboardPage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.7,
                   margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(color: Colors.black),
+                    color: Colors.grey.shade200,
+                    border: Border.all(color: Colors.grey),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: const Center(
                     child: Text(
-                      'Future Dashboard',
+                      '[Placeholder]',
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
@@ -60,7 +60,7 @@ class DashboardPage extends StatelessWidget {
                   child: const Center(
                     child: RotatedBox(
                       quarterTurns: 1,
-                      child: Text('Sponsor Logo?'),
+                      child: Text('[Placeholder]'),
                     ),
                   ),
                 ),
