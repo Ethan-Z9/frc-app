@@ -12,7 +12,7 @@ To debug or contribute to this application, several prerequisites are required.
 
 ---
 
-### ⚙️ Prerequisites
+### ⚙️ Prerequisites(Required)
 
 > Condensed version. For full setup instructions, visit the [official Flutter install guide](https://docs.flutter.dev/get-started/install/windows/mobile).
 
