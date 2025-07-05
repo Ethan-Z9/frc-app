@@ -55,3 +55,4 @@ Run the following in PowerShell or terminal:
 ```bash
 flutter doctor
 ```
+Error related to Visual Studio, Android Studio, and Android Toolchain can be ignored if you are not using them.
